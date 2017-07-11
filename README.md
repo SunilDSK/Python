@@ -1,1 +1,1 @@
-# Python practis program
+# Python practise program
