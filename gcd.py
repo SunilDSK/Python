@@ -1,12 +1,15 @@
 def gcd(n,m):
     print(n,m)
-    i = min(n,m)
+    if m < n:
+        (m,n)=(n,m)
 
-    while i > 0:
-        if ((n%i)==0) and ((m%i)==0):
-            print(i)
-            break
-        i=i-1
+    if ((m%n)==0):
+        return n
+    else:
+        diff = m - n
+    
+    # diff > n? Possible!
+    return ( gcd( max(n,diff),min(n,diff) ) )
 
 print("This program will print GCD of two numbers")
-gcd(16,8)
+print(gcd(16,8))
